@@ -65,8 +65,7 @@ nav {
     min-height: 100vh;
 
     &__section {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
         // display: flex;
         // flex-direction: column;
         // justify-content: center;
@@ -91,7 +90,7 @@ nav {
     }
 
     &__item {
-        display: flex;
+        // display: flex;
         // flex-direction: column;
         margin: 3rem 0;
 
@@ -124,6 +123,23 @@ nav {
 }
 
 
+
+@media (min-width: 992px) {
+    .goal {
+        &__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            &-text {
+                grid-column: 1/4;
+            }
+
+            &-circles {
+                grid-column: 5/7;
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
     nav {
@@ -160,7 +176,8 @@ nav {
             clip-path: circle();
         }
 
+
     }
 }
 
-@media (max-width: 375px) {}
+// @media (max-width: 375px) {}
