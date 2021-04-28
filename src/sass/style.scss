@@ -28,6 +28,10 @@ nav {
     color: #CCEBCF;
     padding: 0.5rem 1.5rem;
     z-index: 1000;
+
+    .login-button {
+        color: goldenrod;
+    }
 }
 
 // .wrapper {
@@ -65,10 +69,10 @@ nav {
     min-height: 100vh;
 
     &__section {
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
         padding: 0.5rem 1.5rem;
         background-color: #101805;
         color: #CCEBCF;
@@ -76,29 +80,38 @@ nav {
         & h3 {
             font-weight: bold;
             // font-size: 4.8rem;
-            font-size: 3.2rem;
+            font-size: 3rem;
         }
 
         p {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
     }
 
     &__img {
-        height: 15rem;
-        clip-path: circle();
+        height: 12rem;
+        width: 12rem;
+        object-fit: cover;
+        border-radius: 100%;
     }
 
     &__item {
-        // display: flex;
-        // flex-direction: column;
         margin: 3rem 0;
 
+        // &-first {
+        //     // position: relative;
+        // }
+
+        &-second {
+            text-align: right;
+        }
+
         &-circles {
+            width: 100%;
+            margin: 2rem 0;
             display: flex;
+            justify-content: space-around;
             align-items: center;
-            // justify-content: space-around;
-            // flex-direction: row;
         }
     }
 
@@ -106,46 +119,31 @@ nav {
 
 // KULE
 .ball {
-    position: absolute;
     border-radius: 100%;
 
     &__small {
-        height: 7.5rem;
-        width: 7.5rem;
+        height: 3rem;
+        width: 3rem;
         background-color: #405C1D;
     }
 
     &__big {
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 6rem;
+        width: 6rem;
         background-color: #405C1D;
     }
 }
 
 
 
-@media (min-width: 992px) {
-    .goal {
-        &__item {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-            &-text {
-                grid-column: 1/4;
-            }
-
-            &-circles {
-                grid-column: 5/7;
-            }
-        }
-    }
-}
 
 @media (min-width: 768px) {
     nav {
         padding: 0.5rem 4.5rem;
     }
 
+    // header
     .heading {
 
         &__text {
@@ -158,24 +156,97 @@ nav {
     // GOAL
     .goal {
 
+        &__item {
+            &-circles {
+                .ball__small {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                .ball__big {
+                    width: 11rem;
+                    height: 11rem;
+                }
+
+                .goal__img {
+                    width: 16rem;
+                    height: 16rem;
+                }
+            }
+        }
+
         &__section {
             padding: 3.5rem 4.5rem;
 
             & h3 {
-                font-size: 4.8rem;
+                font-size: 3.8rem;
             }
 
             p {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
         }
+    }
+}
 
-        &__img {
-            height: 15rem;
-            text-align: right;
-            clip-path: circle();
+@media (min-width: 992px) {
+    .goal {
+
+        &__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            & h3 {
+                font-size: 4rem;
+            }
+
+            & p {
+                font-size: 1.4rem;
+            }
+
+
+            &-first {
+                .goal__item-text {
+                    grid-column: 1/4;
+                }
+
+                .goal__item-circles {
+                    grid-column: 4/7;
+
+                }
+            }
+
+            &-second {
+                .goal__item-text {
+                    grid-column: 4/7;
+                }
+
+                .goal__item-circles {
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+
+
+                }
+            }
+
+            // // ball div
+            // &-circles {
+            //     .ball__small {
+            //         width: 6rem;
+            //         height: 6rem;
+            //     }
+
+            //     .ball__big {
+            //         width: 11rem;
+            //         height: 11rem;
+            //     }
+
+            //     .goal__img {
+            //         width: 16rem;
+            //         height: 16rem;
+            //     }
+            // }
         }
-
 
     }
 }
