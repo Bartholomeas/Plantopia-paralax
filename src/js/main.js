@@ -1,9 +1,12 @@
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
-timeline.to('.hand', 3, { y: -250 })
-    .to('.forest', 3, { y: 150 }, '-=3')
-    .to('.heading__text', 3, { y: 250 }, '-=3')
+timeline.to('.hand', 3, { y: 100 })
+    .to('.forest', 3, { y: -50 }, '-=3')
+    .to('.heading__text', 3, { y: 50 }, '-=3')
+    .to('.goal__section', 3, { top: '0%' }, '-=3');
+// .fromTo('.goal__item-circles', 3, { opacity: 0 }, { opacity: 1, duration: 3 }, '-=3');
+// .to('.goal__section', 3, { top: "0%" }, '-=3')
 
 
 let scene = new ScrollMagic.Scene({
@@ -12,5 +15,5 @@ let scene = new ScrollMagic.Scene({
     triggerHook: 0,
 })
     .setTween(timeline)
-    .setPin('header')
+    .setPin('section')
     .addTo(controller)
