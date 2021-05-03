@@ -44,11 +44,7 @@ nav {
 // HEADER SECTION
 .heading {
     height: 100vh;
-
-    .hand {
-        // position: absolute;
-        right: -50px;
-    }
+    width: 100vw;
 
     & .bg {
         position: absolute;
@@ -104,6 +100,7 @@ nav {
     }
 
     &__item {
+
         margin: 3rem 0;
 
         // &-first {
