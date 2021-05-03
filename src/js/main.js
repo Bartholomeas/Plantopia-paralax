@@ -7,8 +7,7 @@ timeline.to('.hand', 3, { y: -350 })
     .to('.goal__section', 3, { top: '0%' }, '-=3')
     .fromTo('.goal__item-circles-top', 3, { x: -150 }, { x: 0 }, '-=3')
     .fromTo('.goal__item-circles-bottom', 3, { x: 150 }, { x: 0 }, '-=3');
-// .to('.goal__item-circles', 3, { opacity: 1, duration: 3 }, '-=3');
-// .to('.goal__section', 3, { top: "0%" }, '-=3')
+
 
 
 let scene = new ScrollMagic.Scene({

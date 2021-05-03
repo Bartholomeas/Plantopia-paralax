@@ -43,6 +43,7 @@ nav {
 
 // HEADER SECTION
 .heading {
+    position: relative;
     height: 100vh;
     width: 100vw;
 
@@ -100,7 +101,6 @@ nav {
     }
 
     &__item {
-
         margin: 3rem 0;
 
         // &-first {
@@ -140,7 +140,18 @@ nav {
 }
 
 
+// PROFITS SECTION
 
+// .profits {
+.profits__section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    background-color: cadetblue;
+}
+
+// }
 
 
 @media (max-width: 320px) {
@@ -186,6 +197,7 @@ nav {
 
     // header
     .heading {
+        width: 100%;
 
         &__text {
             font-size: 10rem;
@@ -229,6 +241,7 @@ nav {
         }
     }
 }
+
 
 @media (min-width: 992px) {
     .goal {
