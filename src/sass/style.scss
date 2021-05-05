@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    scroll-behavior: smooth;
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
 }
@@ -31,6 +32,12 @@ nav {
 
     .login-button {
         color: rgb(240, 227, 49);
+        cursor: pointer;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: #CCEBCF;
     }
 }
 
@@ -43,14 +50,14 @@ nav {
 
 // HEADER SECTION
 .heading {
-    position: relative;
+    // position: relative;
     height: 100vh;
-    width: 100vw;
+    // width: 100vw;
 
     & .bg {
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 110vh;
         object-fit: cover;
         z-index: -1;
     }
@@ -69,14 +76,15 @@ nav {
 
 // FIRST : GOAL-SECTION 
 .goal {
-    min-height: 100vh;
 
     &__section {
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        min-height: 100vh;
         padding: 0.5rem 1.5rem;
         background-color: #101805;
         color: #CCEBCF;
@@ -112,11 +120,10 @@ nav {
         }
 
         &-circles {
-            width: 100%;
-            // margin: 2rem 0;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            width: 100%;
         }
     }
 
@@ -141,23 +148,23 @@ nav {
 
 
 // PROFITS SECTION
-
-// .profits {
 .profits__section {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem;
     height: 100vh;
     width: 100%;
-    z-index: 1000;
-    background-color: cadetblue;
+    background-color: #CCEBCF;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-// }
 
 
 @media (max-width: 320px) {
-    .goal__section {
-        height: 100%;
-    }
 
     .goal__item-text {
         h3 {
@@ -282,27 +289,7 @@ nav {
 
                 }
             }
-
-            // // ball div
-            // &-circles {
-            //     .ball__small {
-            //         width: 6rem;
-            //         height: 6rem;
-            //     }
-
-            //     .ball__big {
-            //         width: 11rem;
-            //         height: 11rem;
-            //     }
-
-            //     .goal__img {
-            //         width: 16rem;
-            //         height: 16rem;
-            //     }
-            // }
         }
 
     }
 }
-
-// @media (max-width: 375px) {}
